@@ -19,13 +19,26 @@
   <body>
     <div class="flex min-h-dvh flex-col">
       <header class="p-4 md:p-10">
-        <img
-          src="./assets/logo.svg"
-          width="117"
-          height="24"
-          alt="Logo More4Nature"
-          class="lg:h-[40px] lg:w-[189px]"
-        />
+        <picture>
+          <source
+            srcset="./assets/logo.svg"
+            media="(min-width: 1024px)"
+            width="189"
+            height="40"
+          />
+          <source
+            srcset="./assets/logo.svg"
+            media="(max-width: 1023px)"
+            width="117"
+            height="24"
+          />
+          <img
+            src="./assets/logo.svg"
+            width="189"
+            height="40"
+            alt="Logo More4Nature"
+          />
+        </picture>
       </header>
       <main class="m-auto flex max-w-7xl flex-1 items-center p-4 md:py-10 lg:px-0">
         <div class="grid grid-cols-12">
@@ -45,13 +58,26 @@
             This project has received funding from the European Union’s Horizon Europe research and
             innovation programme under grant agreement No. 101133983
           </div>
-          <img
-            src="./assets/flag-of-europe.svg"
-            width="38"
-            height="26"
-            alt="Flag of EU"
-            class="lg:h-[48px] lg:w-[72px]"
-          />
+          <picture class="shrink-0">
+            <source
+              srcset="./assets/flag-of-europe.svg"
+              media="(min-width: 1024px)"
+              width="72"
+              height="48"
+            />
+            <source
+              srcset="./assets/flag-of-europe.svg"
+              media="(max-width: 1023px)"
+              width="38"
+              height="26"
+            />
+            <img
+              src="./assets/flag-of-europe.svg"
+              width="72"
+              height="48"
+              alt="Logo European Commission"
+            />
+          </picture>
         </div>
       </footer>
     </div>

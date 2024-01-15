@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-image: url(/assets/bg-desktop.png);
+  background-image: url(/assets/bg-mobile.webp);
   @apply bg-blue-500 bg-cover bg-fixed bg-center bg-no-repeat font-sans text-white antialiased;
+}
+
+@media only screen and (min-width: 1023px) {
+  body {
+    background-image: url(/assets/bg-desktop.webp);
+  }
 }
