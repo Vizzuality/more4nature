@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url(/assets/bg-desktop.png);
+  @apply antialiased bg-blue-500 font-sans text-white bg-fixed bg-cover bg-center bg-no-repeat;
+}
