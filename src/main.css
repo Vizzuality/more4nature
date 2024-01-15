@@ -4,5 +4,5 @@
 
 body {
   background-image: url(/assets/bg-desktop.png);
-  @apply antialiased bg-blue-500 font-sans text-white bg-fixed bg-cover bg-center bg-no-repeat;
+  @apply bg-blue-500 bg-cover bg-fixed bg-center bg-no-repeat font-sans text-white antialiased;
 }

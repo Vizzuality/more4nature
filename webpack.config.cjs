@@ -1,6 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
+/* import { Configuration } from 'webpack' */
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -15,15 +16,15 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
-          "css-loader",
+          'style-loader',
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [
                   [
-                    "postcss-preset-env",
+                    'postcss-preset-env',
                     {
                       // Options
                     },
@@ -38,7 +39,6 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    chunkIds: 'named',
     minimizer: [
       new TerserPlugin({
         parallel: true,
