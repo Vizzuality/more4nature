@@ -1,3 +1,4 @@
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -33,6 +34,15 @@ module.exports = {
           },
         ],
       },
+    ],
+  },
+  optimization: {
+    minimize: true,
+    chunkIds: 'named',
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+      }),
     ],
   },
 };
