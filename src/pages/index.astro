@@ -214,10 +214,14 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 		</div>
-		<div class="container mx-auto px-4 md:px-16 lg:px-[120px] py-6 md:py-10 border-t border-t-white/5">
-			<div class="flex gap-6">
-				<div class="bg-europe-flag min-w-[72px] h-12 bg-contain bg-no-repeat" />
-				<p class="font-serif text-xs leading-6">This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No. 101133983. UK participants in Horizon Europe Project more4nature are supported by UKRI grant numbers: 10108638 UNEP-WCMC and 10110989 Earthwatch Europe.</p>
+		<div class="container mx-auto px-4 md:px-16 lg:px-[120px] py-6 md:py-10 border-t border-t-white/5 grid gap-6 grid-cols-12">
+			<div class="col-span-12 md:col-span-6 gap-4 space-y-2">
+				<div class="bg-europe-flag min-w-[72px] h-10 bg-contain bg-no-repeat" />
+				<p class="font-serif text-xs leading-6">This project has received funding from the European Union&apos;s Horizon Europe research and innovation programme under grant agreement No. 101133983.</p>
+			</div>
+			<div class="col-span-12 md:col-span-6 gap-4 space-y-2">
+				<div class="bg-innovate-uk min-w-[124px] h-10 bg-contain bg-no-repeat" />
+				<p class="font-serif text-xs leading-6">UK participants in Horizon Europe Project more4nature are supported by UKRI grant numbers: 10108638 UNEP-WCMC and 10110989 Earthwatch Europe.</p>
 			</div>
 		</div>
 	</footer>

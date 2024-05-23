@@ -56,6 +56,7 @@ export default {
         'necu': "url('/images/partners/necu.png')",
         'ecsa': "url('/images/partners/ECSA.png')",
         'nordeco': "url('/images/partners/NORDECO.png')",
+        'innovate-uk': "url('/images/UKRI_Innovate-UK_Horizontal_white.webp')",
       }
     },
   },
