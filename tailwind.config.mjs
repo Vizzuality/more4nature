@@ -33,7 +33,7 @@ export default {
         'forest': "url('/images/forest.jpeg')",
         'm4n-logo': "url('/images/m4n-logo.svg')",
         'm4n-logo-white': "url('/images/m4n-logo-white.svg')",
-        'naturist': "url('/images/naturist.png')",
+        'citizen-science': "url('/images/citizen_science.webp')",
         'europe-flag': "url('/images/flag-of-europe.svg')",
         'ciencias-lisboa': "url('/images/partners/Ciencias-Lisboa.png')",
         'creaf': "url('/images/partners/CREAF.png')",
