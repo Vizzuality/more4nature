@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --config jest.config.ts",
-    "lint": "next lint"
+    "lint": "next lint",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop"
   },
   "dependencies": {
     "@hookform/resolvers": "3.9.0",
@@ -22,6 +24,8 @@
     "@radix-ui/react-select": "2.1.1",
     "@radix-ui/react-separator": "1.1.0",
     "@radix-ui/react-slot": "1.1.0",
+    "@supabase/ssr": "0.4.0",
+    "@supabase/supabase-js": "2.45.1",
     "@tanstack/react-query": "5.51.21",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",

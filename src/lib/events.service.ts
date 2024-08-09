@@ -1,5 +1,6 @@
 // src/services/EventsService.ts
 
+import { EventsRepository } from '@/lib/events.repository';
 import { Paginator } from '@/lib/paginator';
 
 export type Event = {
@@ -14,12 +15,14 @@ export class EventsService extends Paginator<Event> {
   private readonly currentDate: string;
   private readonly events: Event[];
   private readonly filters: Partial<Event>;
+  private repo: EventsRepository;
 
-  constructor(events: Event[], filters: Partial<Event>) {
+  constructor(events: Event[], filters: Partial<Event>, repository: EventsRepository) {
     super(events);
     this.currentDate = new Date().toISOString().split('T')[0];
     this.events = events;
     this.filters = filters || {};
+    this.repo = repository;
   }
 
   protected filter(items: Event[], filters: Partial<Event>): Event[] {
@@ -31,14 +34,20 @@ export class EventsService extends Paginator<Event> {
     });
   }
 
-  getUpcomingEvents(): Event[] {
-    const upcomingEvents = this.events.filter((event) => event.date > this.currentDate);
-    return this.filter(upcomingEvents, this.filters);
+  async getAllEvents(): Promise<Event[]> {
+    return this.repo.getAllEvents();
   }
 
-  getPastEvents(): Event[] {
-    const pastEvents = this.events.filter((event) => event.date <= this.currentDate);
-    return this.filter(pastEvents, this.filters);
+  async getUpcomingEvents(): Promise<Event[]> {
+    return this.repo.getFutureEvents(this.filters);
+    // const upcomingEvents = this.events.filter((event) => event.date > this.currentDate);
+    // return this.filter(upcomingEvents, this.filters);
+  }
+
+  async getPastEvents(): Promise<Event[]> {
+    return this.repo.getPastEvents(this.filters);
+    // const pastEvents = this.events.filter((event) => event.date <= this.currentDate);
+    // return this.filter(pastEvents, this.filters);
   }
 
   static extractFilters(searchParams: URLSearchParams): {
