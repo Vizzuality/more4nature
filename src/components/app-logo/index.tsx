@@ -5,8 +5,11 @@ import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 
-import M4NLogoAlt from '../../../public/images/m4n-logo-alt.webp';
-import M4NLogo from '../../../public/images/m4n-logo.webp';
+// import LogoIcon from '@/components/icons/logo';
+
+import M4NLogoAlt from '../../../public/images/m4n-logo-alt@2x.avif';
+// import M4NLogoTest from '../../../public/images/m4n-logo-test.png';
+import M4NLogo from '../../../public/images/m4n-logo@2x.avif';
 
 export default function AppLogo({
   className,
@@ -16,8 +19,14 @@ export default function AppLogo({
   variant?: 'default' | 'secondary';
 }) {
   return (
-    <Link href="/" className={cn('flex', className)}>
-      <Image src={variant === 'secondary' ? M4NLogoAlt : M4NLogo} alt="more4nature logo" />
+    <Link href="/" className={cn('', className)}>
+      <Image
+        src={variant === 'secondary' ? M4NLogoAlt : M4NLogo}
+        alt="more4nature logo"
+        width={204}
+        height={70}
+      />
+      {/*<LogoIcon />*/}
     </Link>
   );
 }
